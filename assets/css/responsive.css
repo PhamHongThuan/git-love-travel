@@ -1,0 +1,119 @@
+/* <PC high resolution */
+@media (max-width: 1239px){
+    .header1, 
+    .navbar .nav,
+    .navbar .btn-book{
+        display: none;
+    }
+
+    .navbar a{
+        margin: 0 auto;
+    }
+
+    .menu__mobile-icon{
+        display: block;
+    }
+    
+}
+
+/* PC low resolution */
+@media (min-width: 1024px) and (max-width: 1239px){
+
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1023px){
+    .search .input-search{
+        margin-top: 12px;
+    }
+
+    .info-tour{
+        display: none;
+    }
+
+    .package_item.row{
+        flex-direction: column;
+    }
+
+    .package__info-cost{
+        display: none;
+    }
+
+    .package__cost-mobile{
+        display: inline-block;
+    }
+
+    .contact-type + .contact-type{
+        margin-top: 32px;
+    }
+
+    
+}
+
+/*Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .empty{
+        height: 160px;
+        display: block;
+    }
+
+    .summer-promotion{
+        padding: 40%;
+    }
+
+    .number-history{
+        padding: 30%;
+    }
+    
+
+}
+
+/* Mobile*/
+@media (max-width: 739px){
+    .number-history{
+        left: 0;
+    transform: translate3d(0px, 0px, 0px) scale(1, 1); 
+    }
+
+    .search{
+        position: absolute;
+        top: calc(100% + 70px);
+    }
+
+    .empty{
+        height: 310px;
+        display: block;
+    }
+    .search form::before{
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .summer-promotion{
+        padding: 50%;
+    }
+    
+    .summer-promotion-btn{
+        margin-top: 0;
+    }
+
+    .number-history{
+        padding: 30%;
+    }
+
+    .footer{
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
+    .number-history-item .number{
+        font-size: 28px;
+    }
+
+    .number-history-item .title{
+        font-size: 10px;
+        padding: 8px;
+    }
+}
