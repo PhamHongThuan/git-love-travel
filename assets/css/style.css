@@ -10,6 +10,10 @@
     --orange-color: #f3a46b
 }
 
+.main{
+    overflow: hidden;
+}
+
 .btn{
     font-size: 14px;
     padding: 16px 20px;
