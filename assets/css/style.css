@@ -129,6 +129,7 @@ html{
     display: flex;
     justify-content: space-between;
     padding: 25px 15px;
+    align-items: center;
 }
 
 .navbar1::before{
@@ -181,6 +182,19 @@ html{
 
 .nav > li:hover .sub-nav{
     display: block;
+    animation: displaySubNav .2s linear;
+}
+
+
+@keyframes displaySubNav {
+    0%{
+        opacity: 0;
+        transform: scaleX(0.5) translate(-36%);
+    }
+    100%{
+        opacity: 1;
+        transform: scaleX(1) translate(0);
+    }
 }
 
 .nav a{
@@ -196,13 +210,20 @@ html{
     text-transform: capitalize;
     list-style: none;
     position: absolute;
-    top: 199%;
+    top: 46px;
     left: 0;
     background-color: #fff;
     width: 100%;
     min-width: 200px;
     max-width: 300px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    max-height: 360px;
+    overflow-y: auto;
+    
+}
+
+.sub-nav::-webkit-scrollbar{
     display: none;
 }
 
@@ -236,11 +257,15 @@ html{
 }
 
 .menu__mobile-icon{
-    font-size: 20px;
-    margin: 0 auto;
+    font-size: 32px;
+    margin-top: 12px;
     color: #5e6d81;
     display: none;
 
+}
+
+.menu__mobile-icon:hover{
+    opacity: 0.7;
 }
 
 .nav__overlay{
@@ -265,6 +290,7 @@ html{
     height: 100vh;
     background-color: #434a54;
     padding: 40px;
+    text-align: left;
     list-style: none;
     font-size: 24px;
     overflow-y: auto;
@@ -597,10 +623,13 @@ html{
 }
 
 .btn-promotion__detail:hover{
-    background-color: #5e6d81;
-    color: #fff;
+    background-color: #898c91;
     font-size: 18px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-promotion__detail:hover a{
+    color: #fff;
 }
 
 .top-promotions-btn{
@@ -611,8 +640,11 @@ html{
 
 .btn-packages,
 .btn-promotions{
+    border: 1px solid #fff;
+    min-width: 150px;
     margin-left: 8px;
     margin-right: 8px;
+    transition: all 0.1s linear;
 }
 
 .btn-packages a,
@@ -625,6 +657,7 @@ html{
 .btn-promotions:hover{
     background-color: #83868b;
     color: #FFFFFF;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .summer-promotion{
@@ -663,10 +696,12 @@ html{
     background-color: #14b9d5;
     margin-top: 10px;
     width: 220px;
+    border: 1px solid #fff;
     text-align: center;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    transition: all .15s linear;
 }
 
 .summer-promotion-btn a{
@@ -676,7 +711,6 @@ html{
 
 .summer-promotion-btn:hover{
     opacity: 0.8;
-    border: 1px solid #fff;
 }
 
 .our-destination{
@@ -684,7 +718,9 @@ html{
 }
 
 .destination-item:hover{
-    transform: translateY(-4px);
+    /* transform: translateY(-4px); */
+    transform: scale(1.1);
+    transition: all .3s linear;
 }
 
 .destination-address{
@@ -851,7 +887,7 @@ html{
     font-size: 14px;
     border: 1px solid #fff;
     margin-top: 24px;
-    
+    transition: all 0.15s linear;
 }
 
 .package__detail-btn a{
@@ -862,8 +898,8 @@ html{
 }
 
 .package__detail-btn:hover{
-    font-size: 18px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
 }
 
 
@@ -894,11 +930,12 @@ html{
     text-decoration: none;
     color: #FFFFFF;
     margin-right: 12px;
-    animation: all linear .3s;
+    transition: all linear .2s;
 }
 
 .contact__info a:hover{
     opacity: 0.7;
+    transform: scale(1.6);
 }
 
 .contact__info-email{
